@@ -428,7 +428,7 @@ footer a {
   }
   .artist img {
     border-radius: 1rem;
-    box-shadow: 1rem 1rem 1rem var(--black);
+    box-shadow: 5px 5px 5px var(--black);
   }
   
   .front p {
@@ -521,6 +521,75 @@ footer a {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+  #hotel div:nth-child(odd), #parking div:nth-child(odd) {
+       display: grid;
+       grid-template-columns: auto auto;
+       background-color: var(--lightNavy);
+       padding: 1rem;
+       border-radius: 1rem;
+       color: var(--black);
+}
+#hotel div:nth-child(odd) h3, #parking div:nth-child(odd) h3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#hotel div:nth-child(odd) p, #parking div:nth-child(odd) p {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+#hotel div:nth-child(odd) a, #parking div:nth-child(odd) a {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+#hotel div:nth-child(odd) img, #parking div:nth-child(odd) img {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  border-radius: 1rem;
+  margin-left: 2rem;
+}
+#hotel div:nth-child(even), #parking div:nth-child(even) {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: var(--lightNavy);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  color: var(--black);
+}
+#hotel div:nth-child(even) h3, #parking div:nth-child(even) h3 {
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 2;
+}
+#hotel div:nth-child(even) p, #parking div:nth-child(even) p {
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 2;
+grid-row-end: 3;
+}
+#hotel div:nth-child(even) a, #parking div:nth-child(even) a {
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 3;
+grid-row-end: 4;
+}
+#hotel div:nth-child(even) img, #parking div:nth-child(even) img {
+grid-column-start: 1;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 4;
+border-radius: 1rem;
+margin-right: 2rem;
+}
   /*PARKING*/
 #parking {
     background-color: var(--navy);

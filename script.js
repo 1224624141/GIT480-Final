@@ -3,7 +3,7 @@
 $(function () {
     let output = $("#musicContainer");
     $.ajax({
-        url: `https://46d081d8-3853-4389-9415-a362d221ae3f.mock.pstmn.io`,
+        url: `https://a85fa659-cfe8-4744-b38d-aadaafb270dd.mock.pstmn.io`,
         dataType: "json",
         method: "GET"
     }) // closes ajax
@@ -21,7 +21,7 @@ $(function () {
 // lineup carousel
 let slides = $(".slider");
 let dotsContainer = $(".carousel");
-let interval = 3000;
+let interval = 5000;
 let currentIndex = 0;
 
 // creates space for dots
