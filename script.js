@@ -58,31 +58,14 @@ dots.click(function () {
 
 // ACCORDIAN FOR FAQ
 $(function () {
-    $("#accordion").accordion();
+    $("#accordion").accordion({
+    
+        collapsible: true,
+        heightStyle: "content",
+        icons: {
+            header: "ui-icon-plus",
+            activeHeader: "ui-icon-minus"
+          }
+      });
 });
 
-// WEATHER API
-$(function () {
-    let output = $("#forecast");
-    let cityId = "4887398";
-      let apiKey = "a232504d464b2ecbe95366d71bacddc6";
-    $.ajax({
-      url: `https://api.openweathermap.org/data/2.5/forecast?id=${cityId}&appid=${apiKey}&units=imperial`,
-      dataType: "json",
-      method: "GET"
-    }) // closes ajax
-  
-      .done(function (data) {
-      let html = "";
-      let date = new Date();
-      let month = date.toLocaleString('default', { month: 'long' });
-      let imgUrlStart = "http://openweathermap.org/img/wn/";
-  let imgUrlEnd = "@2x.png";
-      for (i=0; i<5; i++){
-        date.setDate(date.getDate() + 1);
-        html += `<section id="dates"><h4>${month} ${date.getDate()}</h4><p>${data.list[1].weather[0].description}</p><img src="${imgUrlStart}${data.list[1].weather[0].icon}${imgUrlEnd}"><p>Low: ${Math.round(data.list[1].main.temp_min)}&deg;</p><p>High: ${Math.round(data.list[1].main.temp_max)}&deg;</p></section>`;
-      }
-      output.html(html);
-      }); // closes success
-    
-  }); // closes function
